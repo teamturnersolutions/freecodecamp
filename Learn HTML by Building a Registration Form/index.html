@@ -8,25 +8,31 @@
   <body>
     <h1 id="title">Welcome to the Donkey<br>RC Race League</h1>
     <p id="description">Donkey Car Race League Registration</p>
-    <form method="post" id="survey-form" action='https://register-demo.freecodecamp.org'>
+    <form id="survey-form" method="post" id="survey-form" action='https://register-demo.freecodecamp.org'>
       <fieldset>
-        <label for="name">Enter Your Name: <input id="name" name="name" type="text" placeholder="John Smith" required /></label>                
-        <label for="email">Enter Your Email: <input id="email" name="email" type="email" placeholder="JSmith@example.com" required /></label>
-        <label for="number">Enter Your a User Number: <input id="number" name="number" type="number" placeholder="12345" min="5" max="5" pattern="[0-9]{5,}" required /></label>        
+        <label for="name" id="name-label">Enter Your Name: <input id="name" name="name" type="text" placeholder="John Smith" required /></label>                
+        <label for="email" type="email" id="email-label">Enter Your Email: <input id="email", id="email-label" name="email" type="email" placeholder="JSmith@example.com" required /></label>
+        <label for="number" id="number-label">Enter Your a User Number: <input id="number" name="number" type="number" placeholder="12345" min="5" max="5" pattern="[0-9]{5,}" required /></label>        
       </fieldset>
       <fieldset>
-        <label for="racer-acc"><input id="racer-acc" type="radio" name="racer-type" class="inline" /> Racer Account</label>
-        <label for="spectator-acc"><input id="spectator-acc" type="radio" name="spectator-type" class="inline" /> Spectator Account</label>
+        <label for="racer-acc"><input id="racer-acc" type="radio" name="racer-acc" class="inline" value="racer-acc"/> Racer Account</label>
+        <label for="spectator-acc"><input id="spectator-acc" type="radio" name="racer-acc" class="inline" value="racer-acc" /> Spectator Account</label>
         <label for="terms/conditions">
-          <input id="terms/conditions" type="checkbox" required name="terms/conditions" class="inline" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+          <input id="terms/conditions" type="checkbox" value="checkbox" required name="terms/conditions" class="inline" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+        </label>
+        <input id="terms/conditions" type="checkbox" value="checkbox" required name="terms/conditions" class="inline" /> I DO NOT accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
         </label>
       </fieldset>
       <fieldset>
-        <label for="prof-pic">Upload a profile picture: <input id="prof-pic" type="file" name="file" /></label>
+        
+        <label for="pro-acc"><input id="pro-acc" type="radio" name="racer-type" class="inline" value="racer-type"/> Professional League</label>
+        <label for="ama-acc"><input id="ama-acc" type="radio" name="racer-type" class="inline" value="racer-type"/> Amatuer League</label>
+        <label for="prof-pic">Upload Avatar: <input id="prof-pic" type="file" name="file" /></label>
         <label for="age">Input your age: <input id="age" type="number" name="age" min="13" max="60" placeholder="I am ____ years old"/></label>
-        <label for="number-label"><input id="number-label" type="radio" name="age-req" class="inline" required/>I certify that this is true<br>***If under 13 parental approval requierd***</label>
+        <label for="number-label"><input id="number-label" type="radio" name="age-req" class="inline" value="age-req" required/>I certify that all this information is true<br>***If under 13 years old parental permission requierd***</label>
+        <label for="number-label"><input id="number-label" type="radio" name="age-req" class="inline" value="age-req" required/>I am not old enough<br>***Participate in other ways***</label>
         <label for="referrer">How did you hear about us?
-          <select id="referrer" name="referrer">
+          <select id="dropdown" name="referrer">
             <option value="">(select one)</option>
             <option value="1">Friend</option>
             <option value="2">Family</option>            
@@ -34,11 +40,11 @@
             <option value="4">Other</option>
           </select>
         </label>
-        <label for="bio">Bio:
-          <textarea id="bio" name="bio" rows="5" cols="30" placeholder="I like to race donkey cars because I find autonomous driving vehicles super cool...(Personalize to taste)"></textarea>
+        <label for="bio">Bio: (Tell the League about YOU)
+          <textarea id="bio" name="bio" rows="5" cols="30" placeholder="I like to race donkey cars because I find autonomous driving vehicles to be extremely interesting and learning more about this technology would be fun...(Personalize to taste)"></textarea>
         </label>
       </fieldset>
-      <input type="submit" value="Submit" />
+      <input id="submit" type="submit" value="Submit" />
     </form>
   </body>
 </html>
